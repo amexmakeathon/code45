@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in/Sign up</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" 
+     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css stylesheet -->
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+   <!-- navbar section starts-->
+    <section id="header">
+    <!-- <img src="E-Wallet-amico.svg" class="logo" height="100px" width="50px"> -->
+    <div>
+        <ul style="list-style-type: none;" id="navbar">
+            <li><a class="active" href="index.htm">Payment</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="signup.htm">Login/Sign Up</a></li>
+        </ul>
+    </div>
+    </section>
+    <!-- navbar section ends -->
+
+    <!-- form section starts-->
+    <div class="center">
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+                <div class="infield">
+                    <input type="text" placeholder="Name" />
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="email" placeholder="Email" name="email"/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="password" placeholder="Password" />
+                    <label></label>
+                </div>
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                </div>
+                <span>or use your account</span>
+                <div class="infield">
+                    <input type="email" placeholder="Email" name="email"/>
+                    <label></label>
+                </div>
+                <div class="infield">
+                    <input type="password" placeholder="Password" />
+                    <label></label>
+                </div>
+                <a href="#" class="forgot">Forgot your password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container" id="overlayCon">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button>Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button>Sign Up</button>
+                </div>
+            </div>
+            <button id="overlayBtn"></button>
+        </div>
+    </div>
+    </div>
+    <!-- form section ends-->
+
+    <!-- js code -->
+    <script>
+      const container= document.getElementById('container');
+      const overlayCon= document.getElementById('overlayCon');
+      const overlayBtn= document.getElementById('overlayBtn');
+
+      overlayBtn.addEventListener('click', ()=>{
+        container.classList.toggle('right-panel-active');
+
+        overlayBtn.classList.remove('btnScaled');
+        window.requestAnimationFrame( ()=>{
+              overlayBtn.classList.add('btnScaled');
+          } )
+      });
+    </script>
+
+     <!-- footer section starts-->  
+     <footer class="section-p1">
+        <div class="col">
+        <img src="icon.png" class="logo" alt="">
+        <h4>REGD. OFFICE ADDRESS</h4>
+        <p><strong>Address:</strong>
+            RG Towers, 100 Feet Rd, <br> 
+            above Arrow showroom, 
+            HAL 2nd <br>  Stage, Indiranagar,
+            Bengaluru, Karnataka <br>
+            560038, India <br> </p>
+        <p><strong>Phone:</strong>+01 222 365 467/ +91 9123467787</p>
+        <div class="follow">
+            <h4>FOLLOW US</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
+            </div>
+    </div>
+
+    <div class="col">
+        <h4>CONSUMERS</h4>
+        <a href="#">Bank Account</a>
+        <a href="#">Payments</a>
+        <a href="#">Loans</a>
+        <a href="#">Investments</a>
+        <a href="#">Insurance</a>
+    </div>
+
+    <div class="col">
+        <h4>COMPANY</h4>
+        <a href="#">About us</a>
+        <a href="#">Media</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact us</a>
+    </div>
+
+    <div class="col">
+        <h4>LEGAL</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Grievance</a>
+        <a href="#">FAQs</a>
+        <a href="#">Disclaimer</a>
+        <a href="#">Help</a>
+    </div>
+
+
+    <div class="col install">
+        <h4>INSTALL APP</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+            <img src="pay/app.jpg" alt="">
+            <img src="pay/play.jpg" alt="">
+        </div>
+    </div>
+    </footer>
+    <!-- footer section ends -->
+
+ </body>
+</html>
